@@ -1,12 +1,15 @@
+/* Блок слайдера */
 .slider{
   background: white;
   position: relative;
 }
+/* Отдельный слайд */
 .slide{
   position: absolute;
   top: 0;
   left: 0;
 }
+/* Указатель на слайд */
 .state{
   z-index: 3;
   width: 20%;
@@ -16,6 +19,7 @@
   background: rgb(240, 252, 243);
   padding: 10px;
 }
+/* Текущая точка */
 .dot-active{
   color: rgb(32, 228, 44);
 }

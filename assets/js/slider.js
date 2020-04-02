@@ -1,9 +1,14 @@
+/*
+Вызов функций
+ПЕО +*/
 $(
   function () {
     lazyload();
     initSlider();
   }
 );
+/* Поочередный выбор рисунка.
+ПЕО +*/
 function lazyload() {
   let lazyloadElements = $('[data-lazy-load="1"]');
   for (let i = 0; i < lazyloadElements.length; i++){
@@ -14,6 +19,8 @@ function lazyload() {
     .css('background-size', 'cover');
   }
 }
+/* Присоединение точки к рисунку.
+ПЕО + */
 function initSlider() {
   let slides = $('.slide');
   for(let i=0; i<slides.length; i++){
@@ -27,6 +34,8 @@ function initSlider() {
   nextSlider(slides)
 
 }
+/* Установка таймера: поочередная активация рисунков и точек.
+ПЕО -*/
 function nextSlider(slides){
   let IntervalId = setInterval(function () {
     let currentSlide = $('[data-slider-active="1"]')
