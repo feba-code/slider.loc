@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="rus">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>slider</title>
+</head>
+<body>
+  <header class="flex-container flex-vc flex-sa">
+  <img src="assets/img/main-logo.png" alt="main-logo" width="12.3%">
+  <form class="flex-container flex-vc flex-gc" action="/search" method="post">
+    <input type="search" name="search_str" value="" placeholder="Введите запрос">
+    <button type="submit" name="button">
+    <i class="fa fa-search"></i>
+  </button>
+  </form>
+  </header>
+  <main>
+    <div class="slider full-size">
+      <div class="slide full-size"
+        data-slider-index="1"
+        data-slider-active="1"
+        data-lazy-load="1"
+        data-lazy-load-img="assets/img/images1.jpg"
+      ></div>
+      <div class="slide full-size"
+        data-slider-index="2"
+        data-slider-active="0"
+        data-lazy-load="1"
+        data-lazy-load-img="assets/img/images2.jpg"
+      ></div>
+      <div class="slide full-size"
+        data-slider-index="3"
+        data-slider-active="0"
+        data-lazy-load="1"
+        data-lazy-load-img="assets/img/images3.jpg"
+      ></div>
+      <div class="slide full-size"
+        data-slider-index="4"
+        data-slider-active="0"
+        data-lazy-load="1"
+        data-lazy-load-img="assets/img/images4.jpg"
+      ></div>
+      <div class="slide full-size"
+        data-slider-index="5"
+        data-slider-active="0"
+        data-lazy-load="1"
+        data-lazy-load-img="assets/img/images5.jpg"
+      ></div>
+      <div class="state flex-container flex-sa flex-gc"></div>
+    </div>
+  </main>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/slider.css">
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="assets/js/slider.js"></script>
+</body>
+</html>
