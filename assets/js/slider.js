@@ -1,14 +1,19 @@
 /*
-Вызов функций
-ПЕО +*/
+* Инициализация на событие DOMLoad
+* ПЕО +
+* Вызов функций по событию
+* */
 $(
   function () {
     lazyload();
     initSlider();
   }
 );
-/* Поочередный выбор рисунка.
-ПЕО +*/
+/*
+* Ленивая загрузка изображений
+* ПЕО +
+* Загрузка всех изображений из data аттрибута
+* */
 function lazyload() {
   let lazyloadElements = $('[data-lazy-load="1"]');
   for (let i = 0; i < lazyloadElements.length; i++){
@@ -19,8 +24,11 @@ function lazyload() {
     .css('background-size', 'cover');
   }
 }
-/* Присоединение точки к рисунку.
-ПЕО + */
+/*
+* Инициализация слайдера
+* ПЕО -
+* Создание точек и вызов функции
+* */
 function initSlider() {
   let slides = $('.slide');
   for(let i=0; i<slides.length; i++){
@@ -32,15 +40,16 @@ function initSlider() {
   }
   $('[data-slider-active="1"]').css('z-index', '2');
   nextSlider(slides)
-
 }
-/* Установка таймера: поочередная активация рисунков и точек.
-ПЕО -*/
+/*
+* Перелистывание слайдера
+* ПЕО -
+* Переключение слайдера и точки
+* */
 function nextSlider(slides){
   let IntervalId = setInterval(function () {
-    let currentSlide = $('[data-slider-active="1"]')
-      .attr('data-slider-index');
-      currentDot = Number(currentSlide);
+    let currentSlide = $('[data-slider-active="1"]').attr('data-slider-index');
+      let currentDot = Number(currentSlide);
       if(currentSlide >= slides.length){
         currentSlide = 0;
       }
