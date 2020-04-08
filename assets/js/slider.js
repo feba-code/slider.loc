@@ -31,16 +31,26 @@ function lazyload() {
 * */
 function initSlider() {
   let slides = $('.slide');
-  for(let i=0; i<slides.length; i++){
+  for(let i=0; i<slides.length; i++) {
     let addClass = '';
-    if(i===0){
+    if (i === 0) {
       addClass = 'dot-active';
     }
-    $('.state').append('<i class="fa fa-circle dot '+addClass+'" data-dot-index="'+ (i + 1) +'" aria-hidden="true"></i>');
+    $('.state').append('<i class="fa fa-circle dot ' + addClass + '" data-dot-index="' + (i + 1) + '" aria-hidden="true"></i>');
+    $('[data-slider-active="1"]').css('z-index', '2');
+    nextSlider(slides)
   }
-  $('[data-slider-active="1"]').css('z-index', '2');
-  nextSlider(slides)
+    $('.slider').append(['<i class="fa fa-arrow-circle-left  slider-btn-control slider-btn-left" aria-hidden="true"></i>',
+      '<i class="fa fa-arrow-circle-right slider-btn-control slider-btn-right" aria-hidden="true"></i>']);
 }
+  $('.slider-btn-control').click(function () {
+    let action = $(this).data('slider-control');
+    switch(action){
+      case 'prev':
+
+    }
+  });
+
 /*
 * Перелистывание слайдера
 * ПЕО -
