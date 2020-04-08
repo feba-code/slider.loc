@@ -46,6 +46,7 @@ function initSlider() {
 * ПЕО -
 * Переключение слайдера и точки
 * */
+// TODO Сделать доваление кнопок
 function nextSlider(slides){
   let IntervalId = setInterval(function () {
     let currentSlide = $('[data-slider-active="1"]').attr('data-slider-index');
